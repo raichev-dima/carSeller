@@ -1,0 +1,11 @@
+mysql:
+  image: mysql
+  ports:
+    - "3306:3306"
+  environment:
+    - MYSQL_USER=testuser
+    - MYSQL_PASSWORD=testpass
+    - MYSQL_DATABASE=car_seller
+    - MYSQL_ROOT_PASSWORD=pass
+  volumes:
+    - "./conf.d:/etc/mysql/conf.d:ro"
