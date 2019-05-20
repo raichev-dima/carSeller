@@ -30,7 +30,7 @@
         },
 
         created() {
-            axios.get(`/backend/person/list`)
+            axios.get(`api/person/list`)
                 .then(response => {
                     this.persons = response.data;
                 });
