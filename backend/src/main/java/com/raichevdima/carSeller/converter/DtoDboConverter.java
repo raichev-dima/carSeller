@@ -1,7 +1,7 @@
 package com.raichevdima.carSeller.converter;
 
 /**
- * @author Wladimir Litvinov
+ * @author Dzmitry Raichau
  */
 public interface DtoDboConverter<T, B> {
     T convertToDto(final B dbo);

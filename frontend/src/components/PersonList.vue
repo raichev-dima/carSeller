@@ -4,15 +4,19 @@
             <thead>
             <tr>
                 <th scope="col">ID</th>
-                <th scope="col">First Name</th>
-                <th scope="col">Last Name</th>
+                <th scope="col">Brand</th>
+                <th scope="col">Model</th>
+                <th scope="col">Year of issue</th>
+                <th scope="col">Price</th>
             </tr>
             </thead>
             <tbody>
-            <tr v-for="(person, index) in persons" :key="index">
-                <td>{{person.id}}</td>
-                <td>{{person.firstName}}</td>
-                <td>{{person.lastName}}</td>
+            <tr v-for="(car, index) in cars" :key="index">
+                <td>{{car.id}}</td>
+                <td>{{car.brand}}</td>
+                <td>{{car.model}}</td>
+                <td>{{car.yearOfIssue}}</td>
+                <td>{{car.price}}</td>
             </tr>
             </tbody>
         </table>
@@ -25,14 +29,14 @@
     export default {
         data() {
             return {
-                persons: []
+                cars: []
             }
         },
 
         created() {
-            axios.get(`api/person/list`)
+            axios.get(`api/car/list`)
                 .then(response => {
-                    this.persons = response.data;
+                    this.cars = response.data;
                 });
         }
     }
