@@ -36,7 +36,7 @@
         },
 
         created() {
-            axios.get(`api/car/list`)
+            axios.get(`api/cars`)
                 .then(response => {
                     this.cars = response.data;
                 });
