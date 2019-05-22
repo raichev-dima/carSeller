@@ -7,5 +7,7 @@
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
 
     <include file="changelog/1-add-initial-car-table.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/2-add-currency-table.xml" relativeToChangelogFile="true"/>
+    <include file="test/insert-test-data.xml" relativeToChangelogFile="true"/>
 
 </databaseChangeLog>

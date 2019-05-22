@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet author="Dzmitry Raichau" id="2.1">
+        <createTable tableName="CURRENCY">
+            <column name="CODE" type="VARCHAR(10)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="RATE" type="DECIMAL(10,4)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="Dzmitry Raichau" id="2.2" >
+        <insert tableName="CURRENCY">
+            <column name="CODE" value="USD"/>
+            <column name="RATE" value="1"/>
+        </insert>
+        <insert tableName="CURRENCY">
+            <column name="CODE" value="BYN"/>
+            <column name="RATE" value="2.0721"/>
+        </insert>
+        <insert tableName="CURRENCY">
+            <column name="CODE" value="EUR"/>
+            <column name="RATE" value="0.8958"/>
+        </insert>
+        <insert tableName="CURRENCY">
+            <column name="CODE" value="RUB"/>
+            <column name="RATE" value="64.5454"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

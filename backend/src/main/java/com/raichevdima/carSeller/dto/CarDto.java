@@ -13,5 +13,6 @@ public class CarDto {
     private String brand;
     private String model;
     private Integer yearOfIssue;
-    private String price;
+    private Double price;
+    private String currency;
 }

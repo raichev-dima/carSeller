@@ -14,7 +14,8 @@ public class MockData {
         carDbo.setBrand("peugeot");
         carDbo.setModel("106");
         carDbo.setYearOfIssue(1993);
-        carDbo.setPrice("USD 1");
+        carDbo.setPrice(10.22);
+        carDbo.setCurrency("USD");
 
         return carDbo;
     }
@@ -25,7 +26,8 @@ public class MockData {
         carDto.setBrand("peugeot");
         carDto.setModel("106");
         carDto.setYearOfIssue(1993);
-        carDto.setPrice("USD 1");
+        carDto.setPrice(10.22);
+        carDto.setCurrency("USD");
 
         return carDto;
     }

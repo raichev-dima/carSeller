@@ -8,6 +8,7 @@
                 <th scope="col">Model</th>
                 <th scope="col">Year of issue</th>
                 <th scope="col">Price</th>
+                <th scope="col">Currency</th>
             </tr>
             </thead>
             <tbody>
@@ -17,6 +18,7 @@
                 <td>{{car.model}}</td>
                 <td>{{car.yearOfIssue}}</td>
                 <td>{{car.price}}</td>
+                <td>{{car.currency}}</td>
             </tr>
             </tbody>
         </table>

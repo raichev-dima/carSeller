@@ -12,7 +12,7 @@ import javax.validation.constraints.NotNull;
 @Data
 @NoArgsConstructor
 @Entity
-@Table(name = "CAR")
+@Table(name = "CARS")
 public class CarDbo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,5 +32,9 @@ public class CarDbo {
 
     @Column(name = "PRICE")
     @NotNull
-    private String price;
+    private Double price;
+
+    @Column(name = "CURRENCY")
+    @NotNull
+    private String currency;
 }

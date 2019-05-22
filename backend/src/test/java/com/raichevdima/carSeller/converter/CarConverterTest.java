@@ -23,15 +23,18 @@ public class CarConverterTest {
         assertEquals(carDbo.getModel(), carDto.getModel());
         assertEquals(carDbo.getYearOfIssue(), carDto.getYearOfIssue());
         assertEquals(carDbo.getPrice(), carDto.getPrice());
+        assertEquals(carDbo.getCurrency(), carDto.getCurrency());
     }
 
     @Test
     public void convertToDbo() {
         final CarDto carDto = MockData.carDto();
         final CarDbo carDbo = carConverter.convertToDbo(carDto);
+
         assertEquals(carDto.getBrand(), carDbo.getBrand());
         assertEquals(carDto.getModel(), carDbo.getModel());
         assertEquals(carDto.getYearOfIssue(), carDbo.getYearOfIssue());
         assertEquals(carDto.getPrice(), carDbo.getPrice());
+        assertEquals(carDto.getCurrency(), carDbo.getCurrency());
     }
 }
